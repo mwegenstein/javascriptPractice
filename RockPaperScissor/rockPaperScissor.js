@@ -4,3 +4,7 @@ rockpaperscissor.js
 // 2. using mathrandom set numbers equal to rock/paper/scissor
 // 3. Create function for return value of each rock/paper/scissor case
 // 4. Set that inside of a compare function to determine who wins. 
+
+//******Begin******//
+
+var userChoice = prompt("Do you choose rock paper or scissors?");
