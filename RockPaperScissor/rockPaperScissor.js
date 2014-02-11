@@ -4,9 +4,12 @@
 // 3. Create function for return value of each rock/paper/scissor case
 // 4. Set that inside of a compare function to determine who wins. 
 
+//Notes: when changing a value of a variable that alreadys exists you do not need to use 'var'i.e w/computerChoice values
+//-parameter names are meant to be general so call them choicex and choicey as opposed to computeChoice and userChoice - this way you can hold onto the function and pass any variable through it.
+
 //******Begin******//
 
-var userChoice = prompt("Do you choose rock paper or scissor?");
+var userChoice = prompt("Do you choose rock paper or scissors?");
 var computerChoice = Math.random();
 console.log(computerChoice);
 	if (computerChoice >=0 && computerChoice <=.33) {
@@ -14,6 +17,16 @@ console.log(computerChoice);
 	} else if (computerChoice >=.34 && computerChoice<=.66) { //do i need the && value? look into order of operations if I can just do <= for each line
 		computerChoice = "paper";
 	} else {
-		computerChoice = "scissor";
+		computerChoice = "scissors";
 	}
-	console.log(computerChoice);
+var compare = function(choice1, choice2) { 
+	if choice1 === choice2 {
+		return "Try again, the result is a tie!"
+	} else if (choice1 === "rock") {
+		if(choice2 === "scissors") {
+			return "rock wins!";
+		} else {
+			return "scissors wins";
+		}
+	}
+}
