@@ -11,7 +11,6 @@
 
 var userChoice = prompt("Do you choose rock paper or scissors?");
 var computerChoice = Math.random();
-console.log(computerChoice);
 	if (computerChoice >=0 && computerChoice <=.33) {
 		computerChoice = "rock";
 	} else if (computerChoice >=.34 && computerChoice<=.66) { //do i need the && value? look into order of operations if I can just do <= for each line
@@ -19,14 +18,28 @@ console.log(computerChoice);
 	} else {
 		computerChoice = "scissors";
 	}
-var compare = function(choice1, choice2) { 
-	if choice1 === choice2 {
-		return "Try again, the result is a tie!"
-	} else if (choice1 === "rock") {
+var compare = function (choice1, choice2) { 
+	if (choice1 === choice2) {
+		return "Try again, the result is a tie!";
+	} if (choice1 === "rock") {
 		if(choice2 === "scissors") {
 			return "rock wins!";
 		} else {
 			return "scissors wins";
 		}
+console.log("did I get here?");
+	} if (choice1 === "scissors") {
+		if (choice2 === "rock") {
+			return "rock wins!";
+		} else {
+			return "scissors wins!";
+		}
+	} if (choice1 === "paper") {
+		if (choice2 === "rock") {
+			return "paper wins!";
+		} else{
+			return "rock wins!";
+		}
 	}
-}
+};
+compare(userChoice, computerChoice);
